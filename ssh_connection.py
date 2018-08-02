@@ -8,5 +8,7 @@ try:
   print "connection established\n"
   stdin,stdout,stderr=ssh.exec_command("pdestate -a")
   print(stdout.read())
+  stdin,stdout,stderr=ssh.exec_command("cd /opt/td" and "ls")
+  print (stdout.read())
 except Exception as e:
   print str(e) + "error in connection"
